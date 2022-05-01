@@ -1,52 +1,75 @@
 .App {
-	padding: 0px 64px;
-}
-
-.navbar {
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 16px;
-	background-color: #393e46;
+	flex-direction: column;
 }
 
-.navbar-left {
+.button-link-primary {
+	color: var(--color-black);
+	background-color: var(--color-primary);
+}
+
+.button-primary {
+	color: var(--color-black);
+	background-color: var(--color-primary);
 	display: flex;
-}
-
-.navbar-logo svg {
-	width: 40px;
-	height: 40px;
-}
-
-.navbar-right {
-	display: flex;
-}
-
-.navbar-links {
-	display: flex;
-}
-
-.button-link {
-	color: #393e46 !important;
-	background-color: #ffd460;
-}
-
-.navbar-link a {
-	padding: 16px;
-	margin-right: 8px;
-	color: #eeeeee;
-	font-size: 16px;
-	text-decoration: none;
+	font-size: 20px;
+	font-weight: 600;
 	text-transform: uppercase;
-	transition: all ease 500ms;
+	width: fit-content;
+	cursor: pointer;
 	border-radius: 8px;
 }
 
-.navbar-link:hover a {
-	color: #ffd460;
+.button-icon-left {
+	padding: 20px 0px 20px 20px;
 }
 
-.navbar-link.active a {
-	color: #ffd460;
+.button-text {
+	padding: 20px;
+}
+
+.page {
+	flex-grow: 1;
+	padding: 40px var(--page-gutter);
+}
+
+.home {
+	display: flex;
+	justify-content: space-between;
+	color: var(--color-white);
+}
+
+.home-left {
+	display: flex;
+	width: 595px;
+	flex-direction: column;
+}
+
+.home-image {
+	width: 440px;
+	height: 640px;
+	background-color: var(--color-primary);
+	border-radius: 8px;
+}
+
+.home-heading {
+	font-size: 120px;
+	font-family: var(--font-secondary);
+	text-align: justify;
+	line-height: 112px;
+	letter-spacing: 0.025em;
+	margin-bottom: 40px;
+}
+
+.home-heading-highlighted {
+	color: var(--color-primary);
+}
+
+.home-sub-heading {
+	font-size: 22px;
+	margin-bottom: 40px;
+}
+
+.home-sub-heading div {
+	padding: 16px 0px;
 }
