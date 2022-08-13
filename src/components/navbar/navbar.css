@@ -2,7 +2,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 16px var(--page-gutter);
+	padding: 1rem var(--page-gutter);
 	font-family: var(--font-primary);
 }
 
@@ -11,8 +11,8 @@
 }
 
 .navbar-logo svg {
-	width: 40px;
-	height: 40px;
+	width: 4rem;
+	height: 4rem;
 }
 
 .navbar-right {
@@ -24,23 +24,22 @@
 }
 
 .navbar-link {
-	margin-left: 40px;
+	margin-left: 2rem;
 }
 
 .navbar-link a {
 	color: var(--color-white);
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 600;
+	letter-spacing: 0.05rem;
 	text-decoration: none;
-	text-transform: uppercase;
 	transition: all ease 500ms;
-	border-radius: 8px;
 }
 
 .navbar-link:hover a {
-	color: var(--color-primary);
+	color: var(--color-highlight);
 }
 
 .navbar-link.active a {
-	color: var(--color-primary);
+	color: var(--color-highlight);
 }

@@ -1,75 +1,14 @@
 .App {
 	display: flex;
+	min-height: 0;
+	flex-grow: 1;
 	flex-direction: column;
-}
-
-.button-link-primary {
-	color: var(--color-black);
-	background-color: var(--color-primary);
-}
-
-.button-primary {
-	color: var(--color-black);
-	background-color: var(--color-primary);
-	display: flex;
-	font-size: 20px;
-	font-weight: 600;
-	text-transform: uppercase;
-	width: fit-content;
-	cursor: pointer;
-	border-radius: 8px;
-}
-
-.button-icon-left {
-	padding: 20px 0px 20px 20px;
-}
-
-.button-text {
-	padding: 20px;
+	height: 100%;
 }
 
 .page {
+	display: flex;
+	min-height: 0;
 	flex-grow: 1;
-	padding: 40px var(--page-gutter);
-}
-
-.home {
-	display: flex;
-	justify-content: space-between;
-	color: var(--color-white);
-}
-
-.home-left {
-	display: flex;
-	width: 595px;
-	flex-direction: column;
-}
-
-.home-image {
-	width: 440px;
-	height: 640px;
-	background-color: var(--color-primary);
-	border-radius: 8px;
-}
-
-.home-heading {
-	font-size: 120px;
-	font-family: var(--font-secondary);
-	text-align: justify;
-	line-height: 112px;
-	letter-spacing: 0.025em;
-	margin-bottom: 40px;
-}
-
-.home-heading-highlighted {
-	color: var(--color-primary);
-}
-
-.home-sub-heading {
-	font-size: 22px;
-	margin-bottom: 40px;
-}
-
-.home-sub-heading div {
-	padding: 16px 0px;
+	padding: 3rem var(--page-gutter);
 }

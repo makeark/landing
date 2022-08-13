@@ -3,27 +3,22 @@ import "./navbar.css";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import { Logo } from "../../logo";
+// import { Logo } from "../../logo";
+import { ReactComponent as Logo } from "../../assets/logo_outline.svg";
 
 export const Navbar = () => {
 	const navbarLinks = [
 		{
-			title: "home",
+			title: "GitHub",
+			href: "https://www.github.com/makeark/ark"
 		},
 		{
-			title: "github",
-		},
-		{
-			title: "docs",
+			title: "Wiki",
+			href: "https://makeark.notion.site"
 		},
 	];
 
-	const location = useLocation();
 	const [navActive, setNavActive] = useState("");
-
-	useEffect(() => {
-		setNavActive(location.pathname.split("/")[1]);
-	});
 
 	return (
 		<div className="navbar">
@@ -42,20 +37,10 @@ export const Navbar = () => {
 									navActive === item.title ? "active" : ""
 								} `}
 							>
-								<Link
-									onClick={() => setNavActive(item.title)}
-									to={item.title}
-								>
-									{item.title}
-								</Link>
+								<a href={item.href} target="_blank">{item.title}</a>
 							</div>
 						);
 					})}
-					{/* <div className="navbar-link">
-						<Link className="button-link-primary" to="/download">
-							download
-						</Link>
-					</div> */}
 				</div>
 			</div>
 		</div>
