@@ -11,6 +11,7 @@ import {
 import { Navbar } from "./components";
 import { Home } from "./pages/home";
 import { Download } from "./pages/download";
+import { Footer } from "./components/footer";
 
 function App() {
 	return (
@@ -23,6 +24,7 @@ function App() {
 						<Route path="/download" element={<Download />} />
 					</Routes>
 				</div>
+				<Footer />
 			</BrowserRouter>
 		</div>
 	);

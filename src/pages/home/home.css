@@ -8,11 +8,12 @@
 }
 
 .home-image {
-	margin-top: 1rem;
+	margin-top: 1.5rem;
+	margin-bottom: 8rem;
 	display: flex;
 	justify-content: center;
 	height: 45rem;
-	filter: drop-shadow(2px 2px 2rem var(--color-primary)) drop-shadow(-2px -2px 2rem var(--color-primary));
+	filter: drop-shadow(2px 2px 2rem var(--color-highlight)) drop-shadow(-2px -2px 2rem var(--color-highlight));
 }
 
 .home-image img {
@@ -45,12 +46,60 @@
 	letter-spacing: 0.05rem;
 	line-height: 2rem;
 	font-weight: 400;
-	font-size: 1rem;
+	font-size: 1.1rem;
 	text-align: center;
 	color: var(--color-grey);
 	margin-bottom: 3rem;
 }
 
-.home-sub-heading div {
-	padding: 16px 0px;
+.home-section-feature {
+	display: flex;
+	width: 100%;
+	height: 20rem;
+	justify-content: space-between;
+	margin-bottom: 3rem;
+	padding: 3rem 2.5rem;
+}
+
+.home-section-feature-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+	gap: 1rem;
+}
+
+.home-section-feature-title {
+	font-size: 3rem;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.home-section-feature-title code {
+	font-size: 1.5rem;
+}
+
+.home-section-feature-desc {
+	font-size: 1.2rem;
+	font-weight: 400;
+	color: var(--color-grey);
+}
+
+.home-section-feature-image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+}
+
+.home-section-wiki {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-bottom: 3rem;
+	padding: 3rem 1.5rem;
+	font-size: 1.5rem;
+	color: var(--color-grey)
 }

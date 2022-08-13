@@ -4,7 +4,7 @@
 	--color-highlight: #8e74e0;
 	--color-white: #ffffff;
 	--color-grey: #cad0d9;
-	--color-black: #12171f;
+	--color-black: #10141a;
 	--font-primary: "Lato", sans-serif;
 	--font-secondary: "Bebas Neue", cursive;
 	--page-gutter: 25rem;
@@ -15,8 +15,7 @@
 
 html,
 body,
-#root,
-.App {
+#root {
 
 	display: flex;
 	flex-grow: 1;
@@ -29,4 +28,15 @@ body,
 
 	background-color: var(--color-black);
 	font-family: var(--font-primary);
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+
+	background-color: var(--color-secondary);
+	color: var(--color-grey);
+	border-radius: 1rem;
+
+	padding: 0.5rem;
 }
