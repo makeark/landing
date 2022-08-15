@@ -16,8 +16,8 @@
 	white-space: nowrap;
 	vertical-align: middle;
 	user-select: none;
-	background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-primary) 100%), var(--color-black) !important;
-	filter: drop-shadow(4px 4px 2rem var(--color-highlight));
+	background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-primary) 50%) !important;
+	filter: drop-shadow(0px 0px 2rem var(--color-primary));
 	border: 1px solid var(--color-highlight);
 	border-radius: .25rem;
 	transition: all .2s ease;
@@ -26,5 +26,5 @@
 
 .button:hover {
 	background: var(--color-highlight);
-	filter: drop-shadow(2px 2px 2.1rem var(--color-highlight));
+	filter: drop-shadow(0px 0px 2rem var(--color-highlight));
 }
