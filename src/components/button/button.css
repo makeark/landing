@@ -1,8 +1,3 @@
-.button-link-primary {
-	color: var(--color-black);
-	background-color: var(--color-primary);
-}
-
 .button {
 	z-index: 1;
 	display: inline-block;
@@ -15,15 +10,21 @@
 	white-space: nowrap;
 	vertical-align: middle;
 	user-select: none;
-	background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-primary) 50%) !important;
-	filter: drop-shadow(0px 0px 2rem var(--color-primary));
+	background: linear-gradient(180deg, var(--color-primary) 50%, var(--color-primary) 100%) !important;
 	border: 1px solid var(--color-highlight);
 	border-radius: .25rem;
 	transition: all .2s ease;
 	cursor: pointer;
 }
 
+.button.shadow {
+	filter: drop-shadow(0px 0px 2rem var(--color-primary));
+}
+
+.button.shadow:hover {
+	filter: drop-shadow(0px 0px 2rem var(--color-highlight));
+}
+
 .button:hover {
 	background: var(--color-highlight);
-	filter: drop-shadow(0px 0px 2rem var(--color-highlight));
 }

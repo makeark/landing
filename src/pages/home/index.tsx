@@ -16,7 +16,7 @@ export function Home() {
 		</div>
 		<div className="home-buttons">
 			<Link to={"download"}>
-				<Button text="Download" />
+				<Button shadow text="Join Beta" />
 			</Link>
 		</div>
 		<div className="home-image">
@@ -25,10 +25,10 @@ export function Home() {
 		<div className="home-section-feature">
 			<div className="home-section-feature-content">
 				<div className="home-section-feature-title">
-					{"Monaco Editor & Intellisense"}
+					Embedded <code>mongosh</code>
 				</div>
 				<div className="home-section-feature-desc">
-					Powered by the same editor that runs in VS Code. Ark supports Intellisense for shell API and complete ES6+ support with type checking.
+					Supports <a href="https://www.mongodb.com/docs/mongodb-shell/reference/methods/" target={"_blank"}>mongosh</a> shell API so that you can write code that you're familiar with.
 				</div>
 			</div>
 			<div className="home-section-feature-image"></div>
@@ -47,10 +47,10 @@ export function Home() {
 		<div className="home-section-feature">
 			<div className="home-section-feature-content">
 				<div className="home-section-feature-title">
-					<code>mongosh</code> Support
+					{"Monaco Editor & Intellisense"}
 				</div>
 				<div className="home-section-feature-desc">
-					Write all kinds of scripts with complete mongosh support.
+					Powered by the same editor that runs in VS Code. Ark supports Intellisense for shell API and complete ES6+ support with type checking.
 				</div>
 			</div>
 			<div className="home-section-feature-image"></div>
@@ -58,5 +58,6 @@ export function Home() {
 		<div className="home-section-wiki">
 			Read more about all the features we have to offer here.
 		</div>
+
 	</div>
 }

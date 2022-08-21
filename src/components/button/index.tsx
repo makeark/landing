@@ -4,15 +4,18 @@ import React from "react";
 
 interface ButtonProps {
   text: string;
+  shadow?: boolean;
 }
 
 export function Button(props: ButtonProps) {
   const {
-    text
+    text,
+    shadow
   } = props;
+
   return (
-    <a className="button" onClick={() => {}}>
+    <div className={"button" + (shadow ? " shadow" : "")} onClick={() => {}}>
       {text}
-    </a>
+    </div>
   );
 }
