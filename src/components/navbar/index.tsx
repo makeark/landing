@@ -24,7 +24,7 @@ export const Navbar = () => {
 		<div className="navbar">
 			<div className="navbar-left">
 				<Link className="navbar-logo" to="/">
-					<Logo />
+					<Logo style={{ width: "3rem", height: "3rem" }} />
 				</Link>
 			</div>
 			<div className="navbar-right">
