@@ -14,7 +14,7 @@ export function Button(props: ButtonProps) {
   } = props;
 
   return (
-    <div className={"button" + (shadow ? " shadow" : "")} onClick={() => {}}>
+    <div className={"button" + (shadow ? " primary-drop-shadow primary-drop-shadow-hover" : "")} onClick={() => {}}>
       {text}
     </div>
   );

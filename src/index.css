@@ -50,3 +50,15 @@ a {
 a:hover {
 	color: var(--color-highlight);
 }
+
+.secondary-drop-shadow {
+	filter: drop-shadow(0px 0px 2rem var(--color-secondary));
+}
+
+.primary-drop-shadow {
+	filter: drop-shadow(0px 0px 3rem var(--color-primary));
+}
+
+.primary-drop-shadow-hover:hover {
+	filter: drop-shadow(0px 0px 3rem var(--color-highlight));
+}
