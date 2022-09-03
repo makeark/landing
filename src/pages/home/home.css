@@ -27,7 +27,7 @@
 
 .home-heading {
 	user-select: none;
-	font-size: 7rem;
+	font-size: var(--font-size-massive);
 	font-family: var(--font-secondary);
 	text-align: center;
 	letter-spacing: 0.1rem;
@@ -42,14 +42,14 @@
 
 .home-heading-highlighted {
 	color: var(--color-highlight);
-	font-size: 4rem;
+	font-size: var(--font-size-large);
 }
 
 .home-sub-heading {
 	letter-spacing: 0.05rem;
 	line-height: 2rem;
 	font-weight: 400;
-	font-size: 1.1rem;
+	font-size: var(--font-size-medium);
 	text-align: center;
 	color: var(--color-grey);
 	margin-bottom: 3rem;
@@ -57,7 +57,9 @@
 
 .home-section-feature {
 	display: flex;
-	gap: 2rem;
+	flex-basis: 0;
+	flex-grow: 1;
+	gap: 5rem;
 	width: 100%;
 	height: 20rem;
 	justify-content: space-between;
@@ -67,15 +69,15 @@
 
 .home-section-feature-content {
 	display: flex;
+	flex-basis: 0;
+	flex-grow: 1;
 	flex-direction: column;
-	justify-content: center;
 	width: 40%;
 	gap: 1rem;
-	padding: 1.5rem;
 }
 
 .home-section-feature-title {
-	font-size: 3rem;
+	font-size: var(--font-size-large);
 	font-weight: 700;
 	display: flex;
 	align-items: baseline;
@@ -83,17 +85,19 @@
 }
 
 .home-section-feature-title code {
-	font-size: 2.5rem;
+	font-size: var(--font-size-large);
 }
 
 .home-section-feature-desc {
-	font-size: 1.2rem;
+	font-size: var(--font-size-medium);
 	font-weight: 400;
 	color: var(--color-grey);
 }
 
 .home-section-feature-image {
 	display: flex;
+	flex-basis: 0;
+	flex-grow: 1;
 	justify-content: center;
 	align-items: center;
 	width: 60%;
@@ -108,11 +112,11 @@
 	text-align: center;
 	margin-bottom: 3rem;
 	padding: 3rem 1.5rem;
-	font-size: 1.5rem;
+	font-size: var(--font-size-medium);
 	color: var(--color-grey);
 }
 
 
 .home-section-wiki a {
-	font-size: 1.5rem;
+	font-size: var(--font-size-medium);
 }

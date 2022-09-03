@@ -15,11 +15,11 @@ export function Home() {
 			<div className="home-heading-highlighted">a mongodb workspace</div>
 		</div>
 		<div className="home-sub-heading">
-			Scripting with MongoDB made minimalistic.
+			Scripting with MongoDB decluttered.
 		</div>
 		<div className="home-buttons">
 			<Link to={"download"}>
-				<Button shadow text="Donwload Beta" />
+				<Button shadow text="Download Beta" />
 			</Link>
 		</div>
 
@@ -35,12 +35,11 @@ export function Home() {
 					Embedded <code>mongosh</code>
 				</div>
 				<div className="home-section-feature-desc">
-					Supports <a href="https://www.mongodb.com/docs/mongodb-shell/reference/methods/" target={"_blank"}>mongosh</a> shell functions in the <a href="https://microsoft.github.io/monaco-editor/">Monaco</a> text editor to provide a shell experience that makes you feel at home.
+					Supports <a href="https://www.mongodb.com/docs/mongodb-shell/reference/methods/" target={"_blank"}>mongosh</a> shell functions in the <a href="https://microsoft.github.io/monaco-editor/">Monaco</a> text editor to provide a shell experience that makes you feel right at home.
 				</div>
 			</div>
 			<div className="home-section-feature-image secondary-drop-shadow">
 				<img className="inline-editor" src={EMBEDDED_MONGOSH} />
-
 			</div>
 		</div>
 

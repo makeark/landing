@@ -1,0 +1,24 @@
+.select-label {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.select-label-text {
+	font-size: var(--font-size-small);
+}
+
+.select-select {
+	border: 1px solid var(--select-border);
+	border-radius: 0.25rem;
+	padding: 0.25rem;
+	font-size: var(--font-size-medium);
+	cursor: pointer;
+	border: solid 1px var(--color-primary);
+	background-color: var(--color-secondary);
+	color: var(--color-grey);
+}
+
+.select-option {
+
+}
