@@ -1,13 +1,12 @@
 .App {
-	display: flex;
-	flex-grow: 1;
-	min-height: 0;
-	flex-direction: column;
-}
+	min-height: 95vh;
+	max-width: 1200px;
+	width: 100%;
+	padding-inline: 4rem;
+	padding-block-end: 4rem;
+	margin: auto;
 
-.page {
 	display: flex;
-	flex-grow: 1;
-	min-height: 0;
-	padding: 3rem var(--page-gutter);
+	flex-direction: column;
+	gap: 2rem;
 }

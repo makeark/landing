@@ -2,11 +2,7 @@ import "./App.css";
 
 import React from "react";
 
-import {
-	BrowserRouter,
-	Routes,
-	Route,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Navbar } from "./components";
 import { Home } from "./pages/home";
@@ -18,12 +14,10 @@ function App() {
 		<div className="App">
 			<BrowserRouter>
 				<Navbar />
-				<div className="page">
-					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/download" element={<Download />} />
-					</Routes>
-				</div>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/download" element={<Download />} />
+				</Routes>
 				<Footer />
 			</BrowserRouter>
 		</div>

@@ -3,8 +3,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 5rem;
-	flex-grow: 1;
+	gap: 3rem;
 	min-height: 0;
 	height: 100%;
 	width: 100%;
@@ -15,14 +14,19 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	width: 65rem;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+.download-container > * {
+	min-width: 22rem;
+	margin: auto;
+	flex: 1;
 }
 
 .download-left {
 	display: flex;
 	flex-direction: column;
-	flex-grow: 1;
-	flex-basis: 0;
 	height: 100%;
 	gap: 1rem;
 }
@@ -37,7 +41,7 @@
 .download-text {
 	line-height: 1.75rem;
 	font-size: var(--font-size-medium);
-	color: var(--color-grey)
+	color: var(--color-grey);
 }
 
 .download-right {
@@ -48,16 +52,15 @@
 	flex-basis: 0;
 	height: 100%;
 	gap: 1.5rem;
-	padding: 0 1rem;
-
 }
 
 .download-beta-banner {
-	display: flex;
 	text-align: center;
 	padding: 1rem;
 	background-color: var(--color-secondary);
-	border-radius: .75rem;
+	border-radius: 0.75rem;
+	width: 100%;
 }
 
-.download-empty-state {}
+.download-empty-state {
+}

@@ -4,36 +4,37 @@
 	--color-highlight: #8e74e0;
 	--color-white: #ffffff;
 	--color-grey: #cad0d9;
-	--color-black: #10141a;
+	--color-dark: #10141a;
+	--color-black: #000000;
 	--font-primary: "Lato", sans-serif;
 	--font-secondary: "Bebas Neue", cursive;
 	--page-gutter: 25rem;
 
-	font-size: max(14px, 0.8vw);
+	font-size: clamp(12px, 2vw, 18px);
 	font-weight: 500;
 
-	--font-size-small: .9rem;
+	--font-size-small: 0.9rem;
 	--font-size-medium: 1.2rem;
 	--font-size-large: 2.5rem;
 	--font-size-massive: 8rem;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 html,
 body,
 #root {
-	display: flex;
-	flex-grow: 1;
-	min-height: 0;
-
 	padding: 0;
 
-	background-color: var(--color-black);
+	background-color: var(--color-dark);
 	font-family: var(--font-primary);
+	margin: 0;
 }
 
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-		monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 
 	background-color: var(--color-secondary);
 	color: var(--color-grey);
@@ -45,7 +46,7 @@ code {
 a {
 	text-decoration: none;
 	color: var(--color-primary);
-	transition: color .1s ease-in;
+	transition: color 0.1s ease-in;
 }
 
 a:hover {
@@ -53,7 +54,7 @@ a:hover {
 }
 
 .secondary-drop-shadow {
-	filter: drop-shadow(0px 0px 2rem var(--color-secondary));
+	filter: drop-shadow(0px 0px 2rem var(--color-black));
 }
 
 .primary-drop-shadow {
@@ -62,4 +63,8 @@ a:hover {
 
 .primary-drop-shadow-hover:hover {
 	filter: drop-shadow(0px 0px 3rem var(--color-highlight));
+}
+
+.row-reverse {
+	flex-direction: row-reverse;
 }
