@@ -12,10 +12,10 @@ export const Navbar = () => {
 			title: "GitHub",
 			href: "https://www.github.com/makeark/ark",
 		},
-		{
-			title: "Wiki",
-			href: "https://makeark.notion.site",
-		},
+		// {
+		// 	title: "Wiki",
+		// 	href: "https://makeark.notion.site",
+		// },
 	];
 
 	const [navActive, setNavActive] = useState("");

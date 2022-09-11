@@ -57,7 +57,7 @@ export function Home() {
 			</div>
 
 			<div className="home-section-wiki">
-				Take a look at our roadmap over <a href="#">here</a>.
+				Take a look at our roadmap over <a href="https://github.com/orgs/makeark/projects/1/views/2" target={"_blank"}>here</a>.
 			</div>
 		</div>
 	);

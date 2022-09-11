@@ -19,7 +19,7 @@ export function Select({ label, defaultValue, options, onSelect }: SelectProps) 
 				onChange={(e) => onSelect(e.target.value)}
 			>
 				{options.map((option) => (
-					<option className="select-option" value={option.value}>{option.label}</option>
+					<option className="select-option" key={option.value} value={option.value}>{option.label}</option>
 				))}
 			</select>
 		</label>

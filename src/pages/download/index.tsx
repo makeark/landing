@@ -32,22 +32,26 @@ interface Release {
 
 export function Download() {
 	const [latest, setLatest] = useState<Release>();
+	const [selected, setSelected] = useState<string>();
 
 	useEffect(() => {
 		fetchLatestRelease().then(release => {
-			setLatest({
-				url: release.html_url,
-				assets: release.assets.map(asset => ({
-					name: asset.name,
-					downloadUrl: asset.browser_download_url,
-					downloadCount: asset.download_count,
-				})),
-			});
+			if (release.assets.length) {
+				setLatest({
+					url: release.html_url,
+					assets: release.assets.map(asset => ({
+						name: asset.name,
+						downloadUrl: asset.browser_download_url,
+						downloadCount: asset.download_count,
+					})),
+				});
+				setSelected(release.assets[0].browser_download_url);
+			}
 		});
 	}, []);
 
 	const downloadLatest = useCallback(() => {
-		
+		window.open(selected, "_blank");
 	}, []);
 
 	return (
@@ -66,9 +70,7 @@ export function Download() {
 				<div className="download-right">
 					<Select
 						label="OS & Arch"
-						onSelect={(value) => {
-							console.log("os", value);
-						}}
+						onSelect={url => setSelected(url)}
 						options={latest?.assets.map(asset => ({
 							label: formatAssetName(asset.name),
 							value: asset.downloadUrl

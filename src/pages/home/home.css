@@ -16,14 +16,14 @@
 	justify-content: center;
 	max-width: 70rem;
 	width: 100%;
-	border-radius: 0.75rem;
+	border-radius: 0.25rem;
 	box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5);
 }
 
 .home-image img {
 	user-select: none;
 	width: 100%;
-	border-radius: 0.75rem;
+	border-radius: 0.25rem;
 }
 
 .home-heading {
@@ -95,7 +95,7 @@
 }
 
 .home-section-feature img {
-	border-radius: 0.75rem;
+	border-radius: 0.25rem;
 	height: auto;
 }
 
@@ -112,6 +112,6 @@
 }
 
 .home-video {
-	border-radius: 0.75rem;
+	border-radius: 0.25rem;
 	width: 25rem;
 }
