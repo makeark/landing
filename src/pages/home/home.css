@@ -14,7 +14,7 @@
 	margin-bottom: 8rem;
 	display: flex;
 	justify-content: center;
-	max-width: 65rem;
+	max-width: 70rem;
 	width: 100%;
 	border-radius: 0.75rem;
 	box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5);
@@ -58,7 +58,7 @@
 
 .home-section-feature {
 	display: flex;
-	gap: 5rem;
+	gap: 2.5rem;
 	width: 100%;
 	justify-content: space-between;
 	margin-bottom: 3rem;
@@ -67,7 +67,6 @@
 }
 
 .home-section-feature > * {
-	width: 20rem;
 	margin: auto;
 	flex-grow: 1;
 }
@@ -75,6 +74,7 @@
 .home-section-feature-content {
 	display: flex;
 	flex-direction: column;
+	width: 15rem; 
 	gap: 1rem;
 }
 
@@ -109,4 +109,9 @@
 
 .home-section-wiki a {
 	font-size: var(--font-size-medium);
+}
+
+.home-video {
+	border-radius: 0.75rem;
+	width: 25rem;
 }

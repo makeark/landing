@@ -2,9 +2,9 @@ import "./home.css";
 import React from "react";
 import { Button } from "../../components";
 
-import ARK_PREVIEW_IMAGE from "../../assets/home_preview.png";
-import EMBEDDED_MONGOSH from "../../assets/embedded_mongosh.png";
-import INLINE_EDIT_DATEPICKER from "../../assets/inline_editor.png";
+import ARK_PREVIEW_IMAGE from "../../assets/images/home_preview.png";
+import EMBEDDED_MONGOSH_VID from "../../assets/videos/ark-editor.mp4";
+import INLINE_EDIT_VID from "../../assets/videos/ark-inline-edit.mp4";
 import { Link } from "react-router-dom";
 
 export function Home() {
@@ -39,7 +39,9 @@ export function Home() {
 						editor to provide a shell experience that makes you feel right at home.
 					</div>
 				</div>
-				<img className="secondary-drop-shadow" src={EMBEDDED_MONGOSH} />
+				<video className="home-video secondary-drop-shadow" autoPlay loop playsInline>
+					<source src={EMBEDDED_MONGOSH_VID} type="video/mp4" />
+				</video>
 			</div>
 
 			<div className="home-section-feature row-reverse">
@@ -49,7 +51,9 @@ export function Home() {
 						Make edits to documents directly from the result without having to write long update queries.
 					</div>
 				</div>
-				<img className="secondary-drop-shadow" src={INLINE_EDIT_DATEPICKER} />
+				<video className="home-video secondary-drop-shadow" autoPlay loop playsInline>
+					<source src={INLINE_EDIT_VID} type="video/mp4" />
+				</video>
 			</div>
 
 			<div className="home-section-wiki">

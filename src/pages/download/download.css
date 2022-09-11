@@ -51,7 +51,12 @@
 	flex-grow: 1;
 	flex-basis: 0;
 	height: 100%;
-	gap: 1.5rem;
+	gap: 1rem;
+}
+
+.download-right span {
+	text-align: center;
+	font-size: var(--font-size-small)
 }
 
 .download-beta-banner {

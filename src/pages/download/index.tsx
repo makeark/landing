@@ -1,6 +1,6 @@
 import "./download.css";
 
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { fetchLatestRelease } from "./releases";
 import { Button } from "../../components";
 import { Select } from "../../components/select";
@@ -19,7 +19,6 @@ interface Release {
 export function Download() {
 	const [latest, setLatest] = useState<Release>();
 	const [os, setOS] = useState<string>();
-	const [version, setVersion] = useState<string>();
 
 	useEffect(() => {
 		fetchLatestRelease().then(release => {
@@ -32,6 +31,10 @@ export function Download() {
 				})),
 			});
 		});
+	}, []);
+
+	const downloadLatest = useCallback(() => {
+		
 	}, []);
 
 	return (
@@ -60,19 +63,9 @@ export function Download() {
 						value={os || ""}
 					/>
 
-					<Select
-						label="Version"
-						onSelect={() => {}}
-						options={[
-							{
-								label: "Latest",
-								value: "latest",
-							},
-						]}
-						value={version || ""}
-					/>
-
 					<Button text="Download Beta" onClick={() => {}} />
+
+					<span>Looking for specific versions? Click here.</span>
 				</div>
 			</div>
 		</div>
