@@ -39,7 +39,7 @@ export function Home() {
 						editor to provide a shell experience that makes you feel right at home.
 					</div>
 				</div>
-				<video className="home-video secondary-drop-shadow" autoPlay loop playsInline>
+				<video className="home-video secondary-drop-shadow" autoPlay loop playsInline muted>
 					<source src={EMBEDDED_MONGOSH_VID} type="video/mp4" />
 				</video>
 			</div>
@@ -51,7 +51,7 @@ export function Home() {
 						Make edits to documents directly from the result without having to write long update queries.
 					</div>
 				</div>
-				<video className="home-video secondary-drop-shadow" autoPlay loop playsInline>
+				<video className="home-video secondary-drop-shadow" autoPlay loop playsInline muted>
 					<source src={INLINE_EDIT_VID} type="video/mp4" />
 				</video>
 			</div>
