@@ -4,18 +4,18 @@ import "./select.css"
 
 interface SelectProps {
 	label: string;
-	value: string;
-	options: Array<{ label: string; value: string; }>;
+	defaultValue?: string;
+	options: Array<{ value: string; label: string; }>;
 	onSelect: (value: string) => void;
 }
 
-export function Select({ label, value, options, onSelect }: SelectProps) {
+export function Select({ label, defaultValue, options, onSelect }: SelectProps) {
 	return (
 		<label className="select-label">
 			<div className="select-label-text">{label}</div>
 			<select
 				className="select-select"
-				value={value}
+				value={defaultValue}
 				onChange={(e) => onSelect(e.target.value)}
 			>
 				{options.map((option) => (

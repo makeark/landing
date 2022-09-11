@@ -5,6 +5,20 @@ import { fetchLatestRelease } from "./releases";
 import { Button } from "../../components";
 import { Select } from "../../components/select";
 
+const formatAssetName = (str: string) => {
+	try {
+		const segments = str.split("-");
+		const last = segments[segments.length - 1];
+		const [arch,ext] = last.split(".");
+		const [, OS, version] = segments;
+		return `${OS}-${arch} / ${version} (${ext})`;
+	} catch (err) {
+		console.log("format asset failure:", str);
+		console.log(err);
+		return str;
+	}
+};
+
 interface ReleaseAsset {
 	name: string;
 	downloadUrl: string;
@@ -18,7 +32,6 @@ interface Release {
 
 export function Download() {
 	const [latest, setLatest] = useState<Release>();
-	const [os, setOS] = useState<string>();
 
 	useEffect(() => {
 		fetchLatestRelease().then(release => {
@@ -52,20 +65,20 @@ export function Download() {
 				</div>
 				<div className="download-right">
 					<Select
-						label="Operating System"
-						onSelect={() => {}}
-						options={[
-							{
-								label: "Linux",
-								value: "linux",
-							},
-						]}
-						value={os || ""}
+						label="OS & Arch"
+						onSelect={(value) => {
+							console.log("os", value);
+						}}
+						options={latest?.assets.map(asset => ({
+							label: formatAssetName(asset.name),
+							value: asset.downloadUrl
+						})) || []}
+						
 					/>
 
-					<Button text="Download Beta" onClick={() => {}} />
+					<Button text="Download Beta" onClick={downloadLatest} />
 
-					<span>Looking for specific versions? Click here.</span>
+					<span>Looking for older versions? Look <a href="https://github.com/makeark/ark/releases" target={"_blank"}>here</a>.</span>
 				</div>
 			</div>
 		</div>
