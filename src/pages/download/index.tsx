@@ -52,7 +52,7 @@ export function Download() {
 
 	const downloadLatest = useCallback(() => {
 		window.open(selected, "_blank");
-	}, []);
+	}, [selected]);
 
 	return (
 		<div className="download">
