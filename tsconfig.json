@@ -15,6 +15,6 @@
 		"noImplicitAny": true,
 		"noEmit": true
 	},
-	"include": ["src", "./global.d.ts", "util"],
+	"include": ["src"],
 	"exclude": ["node_modules/**"]
 }
