@@ -5,6 +5,8 @@ import { fetchLatestRelease } from "./releases";
 import { Button } from "../../components";
 import { Select } from "../../components/select";
 
+const filterWantedAssets = (asset: string) => !asset.endsWith("blockmap") && !asset.endsWith("yml"); 
+
 const formatAssetName = (str: string) => {
 	try {
 		const segments = str.split("-");
@@ -36,16 +38,17 @@ export function Download() {
 
 	useEffect(() => {
 		fetchLatestRelease().then(release => {
-			if (release.assets.length) {
+			const assets = release.assets.filter(asset => filterWantedAssets(asset.name))
+			if (assets.length) {
 				setLatest({
 					url: release.html_url,
-					assets: release.assets.map(asset => ({
+					assets: assets.map(asset => ({
 						name: asset.name,
 						downloadUrl: asset.browser_download_url,
 						downloadCount: asset.download_count,
 					})),
 				});
-				setSelected(release.assets[0].browser_download_url);
+				setSelected(assets[0].browser_download_url);
 			}
 		});
 	}, []);
